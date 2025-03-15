@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +28,7 @@ const RestaurantHeader: React.FC<RestaurantHeaderProps> = ({ userName = "JB" }) 
         <h1 className="text-lg font-semibold">The Red Box</h1>
         
         <div className="ml-auto flex items-center gap-2">
-          <Avatar className="h-8 w-8 bg-purple-700 text-white">
+          <Avatar className="h-8 w-8 bg-[#FC8019] text-white">
             <AvatarFallback>{userName}</AvatarFallback>
           </Avatar>
           <Button variant="ghost" size="icon" className="text-white p-0">
