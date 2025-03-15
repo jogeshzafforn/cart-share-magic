@@ -24,7 +24,8 @@ const ShareCart: React.FC<ShareCartProps> = ({ cart }) => {
   const generateShareLink = () => {
     // Encode cart data in a URL-safe format
     const encodedCart = btoa(JSON.stringify(cart));
-    const url = `${window.location.origin}?cart=${encodedCart}`;
+    // Add user=DV parameter to indicate the shared cart is for user DV
+    const url = `${window.location.origin}?cart=${encodedCart}&user=DV`;
     setShareLink(url);
     setIsOpen(true);
   };
@@ -52,9 +53,10 @@ const ShareCart: React.FC<ShareCartProps> = ({ cart }) => {
       <Button 
         variant="outline" 
         onClick={generateShareLink}
-        className="flex-1 justify-start"
+        className="text-xs px-2 h-9"
+        size="sm"
       >
-        <Share className="h-4 w-4 mr-2" />
+        <Share className="h-4 w-4 mr-1" />
         Share
       </Button>
       

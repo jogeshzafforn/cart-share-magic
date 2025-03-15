@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-const RestaurantHeader: React.FC = () => {
+interface RestaurantHeaderProps {
+  userName?: string;
+}
+
+const RestaurantHeader: React.FC<RestaurantHeaderProps> = ({ userName = "JB" }) => {
   return (
     <div className="bg-purple-950 text-white p-4">
       <div className="flex items-center mb-2">
@@ -26,7 +30,7 @@ const RestaurantHeader: React.FC = () => {
         
         <div className="ml-auto flex items-center gap-2">
           <Avatar className="h-8 w-8 bg-purple-700 text-white">
-            <AvatarFallback>JB</AvatarFallback>
+            <AvatarFallback>{userName}</AvatarFallback>
           </Avatar>
           <Button variant="ghost" size="icon" className="text-white p-0">
             <svg 
