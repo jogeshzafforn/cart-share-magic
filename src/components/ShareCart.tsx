@@ -51,11 +51,11 @@ const ShareCart: React.FC<ShareCartProps> = ({ cart }) => {
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <Button 
         variant="outline" 
-        size="icon" 
         onClick={generateShareLink}
-        className="h-10 w-10"
+        className="flex-1 justify-start"
       >
-        <Share className="h-4 w-4" />
+        <Share className="h-4 w-4 mr-2" />
+        Share
       </Button>
       
       <DialogContent className="sm:max-w-md">

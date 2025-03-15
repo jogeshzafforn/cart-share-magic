@@ -2,6 +2,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const RestaurantHeader: React.FC = () => {
   return (
@@ -22,21 +23,27 @@ const RestaurantHeader: React.FC = () => {
           </svg>
         </Button>
         <h1 className="text-lg font-semibold">The Red Box</h1>
-        <Button variant="ghost" size="icon" className="text-white p-0 ml-auto">
-          <svg 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            className="w-5 h-5"
-          >
-            <circle cx="12" cy="12" r="1"></circle>
-            <circle cx="19" cy="12" r="1"></circle>
-            <circle cx="5" cy="12" r="1"></circle>
-          </svg>
-        </Button>
+        
+        <div className="ml-auto flex items-center gap-2">
+          <Avatar className="h-8 w-8 bg-purple-700 text-white">
+            <AvatarFallback>JB</AvatarFallback>
+          </Avatar>
+          <Button variant="ghost" size="icon" className="text-white p-0">
+            <svg 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              className="w-5 h-5"
+            >
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="19" cy="12" r="1"></circle>
+              <circle cx="5" cy="12" r="1"></circle>
+            </svg>
+          </Button>
+        </div>
       </div>
       
       <div className="flex items-center mb-2">
